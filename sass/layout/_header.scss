@@ -1,0 +1,82 @@
+.logo{
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-right: 93px;
+}
+.logo-accent{
+    color: #2196F3;
+}  
+.header{
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+.header__container{
+    display: flex;
+    align-items: center;
+}
+.header-list{
+    list-style: none;
+    display: flex;
+    width: 294px;
+    height: 16px;
+    left: 453px;
+    top: 32px;
+    margin-right: 331px;
+}
+.contact{
+    display: flex;
+    margin-left: auto;
+}
+.header-list__item{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #212121;
+    list-style: none;
+    margin-right: 50px;
+    & :hover, 
+    & :focus{
+        color:  #2196F3;
+    } 
+}
+.header-list__link{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mail{
+    width: 161px;
+    margin-right: 30px;
+}
+.header-list__mail{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color:  #757575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-list__icon{
+    display: flex;
+    margin-right: 10px;
+    fill:  currentColor;
+}
+.header-list__tel{
+    width: 142px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color:  #757575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,42 @@
+.work{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.work-list{
+    list-style: none;
+    display: flex;
+}
+.work-list__item + .work-list__item{
+    margin-left: 30px;
+}
+.work__title{
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 50px;
+}
+.work-list__container{
+    position: relative;
+    width: 370px;
+    height: 294px;
+}
+.work-content{
+    position: absolute;
+    text-align: center;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+}
+.work-content__text{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 27px;
+}
