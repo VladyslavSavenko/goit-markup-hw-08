@@ -1,0 +1,113 @@
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ececec;
+
+  & .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 92px;
+  }
+
+  &__logo {
+    @include font(700, 24px, 28px, 0.03em);
+    &_color {
+    color: var(--active-color);
+    }
+    @include desc {
+    @include font(700, 26px, 31px, 0.03em);     
+    }
+  }
+  &__btn {
+    @include tab {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  display: none;
+  @include tab {
+      display: block;
+    }
+}
+
+.navigation__items {
+  @extend %flex-align;
+
+    &-link {
+    position: relative;
+    @include font(500, 14px, 16px, 0.02em);
+    padding-top: 27px;
+    padding-bottom: 27px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+        color: var(--active-color);
+  }
+ }
+ @include desc {
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+}
+
+
+.contacts {
+  display: none;
+  @include tab {
+    display: block;
+  }
+  @include desc {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: auto;
+
+
+  }
+  &__list {
+    display: flex;
+    justify-content: start;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    @include desc {
+      &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    }
+  }
+  &__link {
+  @extend %flex-items;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include font(500, 12px, 14px, 0.02em);
+  color: var(--second-color);
+  fill: var(--second-color);
+
+    &:hover, &:focus {
+        color: var(--active-color);
+        fill: var(--active-color);
+ }
+    &-icon {
+        margin-right: 10px;
+        width: 14px;
+        height: 14px;
+     }
+      @include desc {
+      @include font(500, 14px, 16px, 0.02em);
+   }
+   }
+  }
+
+.header-contact  {
+  margin-left: 10px;
+
+}
+

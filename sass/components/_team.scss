@@ -1,0 +1,72 @@
+.team {
+  background-color: #f5f4fa;
+
+  &__title {
+    @include font(null, 28px, 33px, 0.03em);
+    text-align: center;
+    margin-bottom: 30px;
+    @include desc {
+    @include font(null, 36px, 42px, 0.03em);
+    margin-bottom: 50px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__items {
+    background-color: #ffffff;
+    //width: calc((100% - 90px) / 4);
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @include tab {
+    width: calc((100% - 30px) / 2);
+    }
+    @include desc {
+    width: calc((100% - 90px) / 4);
+    }
+  }
+  &__wrap {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+
+        &-name {
+        @include font(500, 16px, 19px, 0.03em);
+        margin-bottom: 10px;  
+    }
+        &-position{
+        @include font(null, 16px, 19px, 0.03em);
+        color: var(--second-color);    
+        }
+  }
+}
+
+
+.social-links {
+  @extend %flex-items;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.social-link-item {
+  width: 44px;
+  height: 44px;
+  @extend %flex-items;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link-item:hover,
+.social-link-item:focus {
+  background-color: #2196f3;
+  border-radius: 50%;
+  fill: #fff;
+}

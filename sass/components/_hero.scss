@@ -1,0 +1,70 @@
+.hero {
+  background-image: var(--gradient-bg),url(../images/hero-bg-mob.jpg);
+  background-color: rgba(47, 48, 58, 0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: var(--gradient-bg),url(../images/hero-bg-mob-2x.jpg);
+  }
+  @include tab {
+  background-image: var(--gradient-bg),url(../images/hero-bg-tab.jpg);
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: var(--gradient-bg),url(../images/hero-bg-tab-2x.jpg);
+  }
+  }
+  @include desc {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: var(--gradient-bg),url(../images/hero-bg.jpg);
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: var(--gradient-bg),url(../images/hero-bg-2x.jpg);
+  }
+  }
+    &__btn {
+    font-family: inherit;
+    @include font(700, 16px, 30px, 0.06em);
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #2196f3;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    min-width: 216px;
+    height: 50px;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+        &:hover {
+            color: #ffffff;
+        }
+  }
+  &__title {
+    @include font(900, 26px, 42px, 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @include mob {
+      width: 360px;
+    }
+     @include desc {
+     @include font(900, 44px, 60px, 0.06em);
+     width: 696px;
+    }
+ }
+}
+

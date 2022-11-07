@@ -1,0 +1,112 @@
+ .burger {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    @include tab {
+        display: none;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        &:hover,&:focus {
+            fill: var(--active-color);
+            cursor: pointer;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 38px;
+        padding-left: 40px;
+    }
+    &__items {
+        @include font (500, 40px, 47px, .02em)
+        
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 64px;
+        padding-left: 40px;
+    }
+    &__tel {
+        @include font (500, 34px, 40px, .02em);
+        color: var(--active-color)
+    }
+    &__mail {
+        @include font (500, 24px, 28px, .02em);
+        color: var(--second-color);
+    }
+    &__soc-items {
+        display: flex;
+        gap: 20px;
+        padding-left: 40px;
+    }
+    &__soc-item {
+        @include font (500, 18px, 22px, .02em);
+        color: var(--active-color);
+
+        &:not(:last-child)::after {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 22px;
+            background-color: rgba(33, 33, 33, 0.2);
+            position: absolute;
+            margin-left: 10px;
+        }
+    }
+} 
+
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #ffffff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  >.container {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,50 @@
+.list {
+  list-style: none;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  font-style: normal;
+}
+
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  @include font(700, 26px, 31px, 0.03em);
+  color: #000000;
+}
+
+.title {
+  @include font(null, 36px, 42px, 0.03em);
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desc {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  }
+}
+
+.current {
+  color: var(--active-color);
+}
+.current-color {
+  color: var(--active-color);
+
+}
+.curent-bg {
+  background-color: #2196f3;
+}
+.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--active-color);
+  border-radius: 2px;
+  bottom: -1px;
+}

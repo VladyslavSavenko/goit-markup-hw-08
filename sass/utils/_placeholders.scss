@@ -1,0 +1,38 @@
+// міксини
+@mixin font ($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height:calc($lh/$fs);
+  letter-spacing: $ls;
+} 
+
+@mixin mob {
+  @media screen and (min-width:480px) {
+    @content
+  }
+}
+
+
+@mixin tab {
+  @media screen and (min-width:768px) {
+    @content
+  }
+}
+
+@mixin desc {
+  @media screen and (min-width:1200px) {
+    @content
+  }
+}
+
+// плейсхолдери
+%flex-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+%flex-align {
+    display: flex;
+    align-items: center;    
+}
+
