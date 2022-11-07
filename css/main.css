@@ -1149,23 +1149,6 @@ a {
   border-radius: 4px;
   margin-top: 30px;
 }
-
-/* .check-text::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--main-color);
-  border-radius: 3px;
-}
-
-.input-check:checked + .check-text::before {
-  background-color: green;
-  border: none;
-  background-image: url(../images/check.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
- */
 .burger {
   position: fixed;
   top: 0;
